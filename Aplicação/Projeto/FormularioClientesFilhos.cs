@@ -77,6 +77,7 @@ namespace Projeto
             return true;
         }
 
+        // Para limpar dados das text box
         private void limparDadosCliente()
         {
             tbNomeCliente.Text = "";
