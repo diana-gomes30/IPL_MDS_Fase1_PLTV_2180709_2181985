@@ -1,0 +1,6 @@
+public partial class BookidsDBContainer : DbContext
+{
+	public virtual DbSet<Clientes> ClientesSet { get; set; }
+        public virtual DbSet<Filhos> FilhosSet { get; set; }
+        public virtual DbSet<Animadores> AnimadoresSet { get; set; }
+}
