@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9ca820d8a8d466ab711e49b4865a4f4" Name="Diagram1" ZoomLevel="78" >
+        <EntityTypeShape EntityType="BookidsDB.Pessoas" Width="1.5" PointX="4.625" PointY="5.875" />
+        <EntityTypeShape EntityType="BookidsDB.Clientes" Width="1.5" PointX="0.875" PointY="8.125" />
+        <InheritanceConnector EntityType="BookidsDB.Clientes" />
+        <EntityTypeShape EntityType="BookidsDB.Filhos" Width="1.5" PointX="1.5" PointY="4.25" />
+        <AssociationConnector Association="BookidsDB.ClientesFilhos" />
+        <InheritanceConnector EntityType="BookidsDB.Filhos" />
+        <EntityTypeShape EntityType="BookidsDB.Inscricoes" Width="1.5" PointX="6.5" PointY="4.125" />
+        <AssociationConnector Association="BookidsDB.FilhosInscricoes" />
+        <EntityTypeShape EntityType="BookidsDB.Escolas" Width="1.5" PointX="8.375" PointY="1.625" />
+        <AssociationConnector Association="BookidsDB.EscolasFilhos" />
+        <EntityTypeShape EntityType="BookidsDB.Participacoes" Width="1.5" PointX="10.875" PointY="1.875" />
+        <AssociationConnector Association="BookidsDB.EscolasParticipacoes" />
+        <EntityTypeShape EntityType="BookidsDB.Eventos" Width="1.5" PointX="12.5" PointY="4.625" />
+        <AssociationConnector Association="BookidsDB.EventosParticipacoes" />
+        <AssociationConnector Association="BookidsDB.EventosInscricoes" />
+        <EntityTypeShape EntityType="BookidsDB.Animadores" Width="1.5" PointX="7.25" PointY="6.875" />
+        <InheritanceConnector EntityType="BookidsDB.Animadores" />
+        <EntityTypeShape EntityType="BookidsDB.Colaboracoes" Width="1.5" PointX="9.875" PointY="6.875" />
+        <AssociationConnector Association="BookidsDB.AnimadoresColaboracoes" />
+        <AssociationConnector Association="BookidsDB.EventosColaboracoes" />
+        <EntityTypeShape EntityType="BookidsDB.Compras" Width="1.5" PointX="4.5" PointY="9.25" />
+        <AssociationConnector Association="BookidsDB.ClientesCompras" />
+        <EntityTypeShape EntityType="BookidsDB.DetalheCompras" Width="1.5" PointX="7.25" PointY="9.375" />
+        <AssociationConnector Association="BookidsDB.ComprasDetalheCompras" />
+        <EntityTypeShape EntityType="BookidsDB.Produtos" Width="1.5" PointX="10.25" PointY="9.875" />
+        <AssociationConnector Association="BookidsDB.ProdutosDetalheCompras" />
+        <EntityTypeShape EntityType="BookidsDB.TipoProduto" Width="1.5" PointX="13.375" PointY="9.5" />
+        <AssociationConnector Association="BookidsDB.TipoProdutoProdutos" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

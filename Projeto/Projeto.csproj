@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8462283B-341E-4AEE-BBCA-B1ADD9051036}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projeto</RootNamespace>
+    <AssemblyName>Projeto</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animadores.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookidsDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookidsDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookidsDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BookidsDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookidsDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Colaboracoes.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetalheCompras.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Escolas.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Eventos.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Filhos.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inscricoes.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioAnimadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAnimadores.Designer.cs">
+      <DependentUpon>FormularioAnimadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioClientesFilhos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioClientesFilhos.Designer.cs">
+      <DependentUpon>FormularioClientesFilhos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioEscolas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEscolas.Designer.cs">
+      <DependentUpon>FormularioEscolas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEventos.Designer.cs">
+      <DependentUpon>FormularioEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioProdutosVendidosLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioProdutosVendidosLoja.Designer.cs">
+      <DependentUpon>FormularioProdutosVendidosLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioVendaProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioVendaProdutos.Designer.cs">
+      <DependentUpon>FormularioVendaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Participacoes.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pessoas.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Produtos.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoProduto.cs">
+      <DependentUpon>BookidsDB.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAnimadores.resx">
+      <DependentUpon>FormularioAnimadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioClientesFilhos.resx">
+      <DependentUpon>FormularioClientesFilhos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEscolas.resx">
+      <DependentUpon>FormularioEscolas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEventos.resx">
+      <DependentUpon>FormularioEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioProdutosVendidosLoja.resx">
+      <DependentUpon>FormularioProdutosVendidosLoja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioVendaProdutos.resx">
+      <DependentUpon>FormularioVendaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="BookidsDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BookidsDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BookidsDB.edmx.diagram">
+      <DependentUpon>BookidsDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BookidsDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BookidsDB.Context.cs</LastGenOutput>
+      <DependentUpon>BookidsDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="BookidsDB.edmx.sql" />
+    <Content Include="BookidsDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BookidsDB.cs</LastGenOutput>
+      <DependentUpon>BookidsDB.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
