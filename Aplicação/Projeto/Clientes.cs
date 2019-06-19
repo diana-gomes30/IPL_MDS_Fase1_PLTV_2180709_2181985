@@ -21,12 +21,14 @@ namespace Projeto
             this.Compras = new HashSet<Compras>();
         }
     
-        public string ValorOferta { get; set; }
-        public string NrCartao { get; set; }
+        public double ValorOferta { get; set; }
+        public int NrCartao { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Filhos> Filhos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compras> Compras { get; set; }
+
+       
     }
 }

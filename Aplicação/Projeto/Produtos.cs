@@ -22,12 +22,19 @@ namespace Projeto
     
         public int CodProduto { get; set; }
         public string Designacao { get; set; }
-        public string Preco { get; set; }
-        public string StockExistente { get; set; }
+        public double Preco { get; set; }
+        public int StockExistente { get; set; }
         public int CodTipoProduto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalheCompras> DetalheCompras { get; set; }
         public virtual TipoProduto TipoProduto { get; set; }
+
+        public override string ToString()
+        {
+            return Designacao + " (" + TipoProduto.Tipo + ") : " + Preco;
+        }
+
+
     }
 }

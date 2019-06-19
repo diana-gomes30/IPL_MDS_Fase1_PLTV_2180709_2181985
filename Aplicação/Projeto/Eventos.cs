@@ -25,12 +25,11 @@ namespace Projeto
         public int NrEvento { get; set; }
         public string Descricao { get; set; }
         public string Local { get; set; }
-        public string DataHora { get; set; }
-        public string LimiteParticipacao { get; set; }
-        public string IdadeInferior { get; set; }
-        public string IdadeSuperior { get; set; }
+        public System.DateTime DataHora { get; set; }
+        public int LimiteParticipacao { get; set; }
+        public int IdadeInferior { get; set; }
+        public int IdadeSuperior { get; set; }
         public string TipoEvento { get; set; }
-        public string ColaboracoesId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Participacoes> Participacoes { get; set; }

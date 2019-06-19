@@ -28,271 +28,414 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioAnimadores));
+            this.listViewAnimadores = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tbTelemovelAnimadores = new System.Windows.Forms.MaskedTextBox();
+            this.tbTelefoneAnimadores = new System.Windows.Forms.MaskedTextBox();
+            this.tbCodPostalAnimadores = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.buttonApagar = new System.Windows.Forms.Button();
+            this.buttonAlterar = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
+            this.tbEspecialidade = new System.Windows.Forms.TextBox();
+            this.tbMailAnimadores = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbLocalidadeAnimadores = new System.Windows.Forms.TextBox();
+            this.tbMoradaAnimadores = new System.Windows.Forms.TextBox();
+            this.tbNomeAnimadores = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.label9 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.novoAnimadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // listViewAnimadores
             // 
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.button5);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 36);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(484, 333);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Animadores";
+            this.listViewAnimadores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8});
+            this.listViewAnimadores.FullRowSelect = true;
+            this.listViewAnimadores.GridLines = true;
+            this.listViewAnimadores.Location = new System.Drawing.Point(21, 264);
+            this.listViewAnimadores.MultiSelect = false;
+            this.listViewAnimadores.Name = "listViewAnimadores";
+            this.listViewAnimadores.Size = new System.Drawing.Size(549, 108);
+            this.listViewAnimadores.TabIndex = 72;
+            this.listViewAnimadores.UseCompatibleStateImageBehavior = false;
+            this.listViewAnimadores.View = System.Windows.Forms.View.Details;
+            this.listViewAnimadores.SelectedIndexChanged += new System.EventHandler(this.listViewAnimadores_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nome";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Morada";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Localidade";
+            this.columnHeader3.Width = 79;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Código Postal";
+            this.columnHeader4.Width = 87;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Telefone";
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Telemóvel";
+            this.columnHeader6.Width = 75;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Mail";
+            this.columnHeader7.Width = 35;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Especialidade";
+            this.columnHeader8.Width = 93;
+            // 
+            // tbTelemovelAnimadores
+            // 
+            this.tbTelemovelAnimadores.Location = new System.Drawing.Point(251, 155);
+            this.tbTelemovelAnimadores.Mask = "000 000 000";
+            this.tbTelemovelAnimadores.Name = "tbTelemovelAnimadores";
+            this.tbTelemovelAnimadores.Size = new System.Drawing.Size(74, 20);
+            this.tbTelemovelAnimadores.TabIndex = 66;
+            // 
+            // tbTelefoneAnimadores
+            // 
+            this.tbTelefoneAnimadores.Location = new System.Drawing.Point(103, 155);
+            this.tbTelefoneAnimadores.Mask = "000 000 000";
+            this.tbTelefoneAnimadores.Name = "tbTelefoneAnimadores";
+            this.tbTelefoneAnimadores.Size = new System.Drawing.Size(71, 20);
+            this.tbTelefoneAnimadores.TabIndex = 65;
+            // 
+            // tbCodPostalAnimadores
+            // 
+            this.tbCodPostalAnimadores.Location = new System.Drawing.Point(485, 129);
+            this.tbCodPostalAnimadores.Mask = "0000 - 000";
+            this.tbCodPostalAnimadores.Name = "tbCodPostalAnimadores";
+            this.tbCodPostalAnimadores.Size = new System.Drawing.Size(79, 20);
+            this.tbCodPostalAnimadores.TabIndex = 63;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(270, 35);
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.Control;
+            this.label14.Location = new System.Drawing.Point(21, 245);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(102, 13);
-            this.label14.TabIndex = 54;
+            this.label14.Size = new System.Drawing.Size(150, 16);
+            this.label14.TabIndex = 75;
             this.label14.Text = "Lista de Animadores";
             // 
-            // button5
+            // buttonApagar
             // 
-            this.button5.Location = new System.Drawing.Point(273, 269);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(178, 23);
-            this.button5.TabIndex = 53;
-            this.button5.Text = "Apagar Animadores";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonApagar.Image = ((System.Drawing.Image)(resources.GetObject("buttonApagar.Image")));
+            this.buttonApagar.Location = new System.Drawing.Point(514, 196);
+            this.buttonApagar.Name = "buttonApagar";
+            this.buttonApagar.Size = new System.Drawing.Size(50, 49);
+            this.buttonApagar.TabIndex = 71;
+            this.buttonApagar.UseVisualStyleBackColor = true;
+            this.buttonApagar.Click += new System.EventHandler(this.buttonApagar_Click);
             // 
-            // listBox1
+            // buttonAlterar
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(273, 51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(178, 212);
-            this.listBox1.TabIndex = 52;
+            this.buttonAlterar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAlterar.Image")));
+            this.buttonAlterar.Location = new System.Drawing.Point(449, 196);
+            this.buttonAlterar.Name = "buttonAlterar";
+            this.buttonAlterar.Size = new System.Drawing.Size(47, 49);
+            this.buttonAlterar.TabIndex = 70;
+            this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
-            // button3
+            // buttonAdicionar
             // 
-            this.button3.Location = new System.Drawing.Point(49, 297);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(135, 21);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Alterar Dados ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdicionar.Image")));
+            this.buttonAdicionar.Location = new System.Drawing.Point(386, 196);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(48, 49);
+            this.buttonAdicionar.TabIndex = 69;
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
-            // button1
+            // tbEspecialidade
             // 
-            this.button1.Location = new System.Drawing.Point(49, 255);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
-            this.button1.TabIndex = 50;
-            this.button1.Text = "Adicionar Animadores";
-            this.button1.UseVisualStyleBackColor = true;
+            this.tbEspecialidade.Location = new System.Drawing.Point(103, 181);
+            this.tbEspecialidade.Name = "tbEspecialidade";
+            this.tbEspecialidade.Size = new System.Drawing.Size(268, 20);
+            this.tbEspecialidade.TabIndex = 68;
             // 
-            // textBox8
+            // tbMailAnimadores
             // 
-            this.textBox8.Location = new System.Drawing.Point(154, 218);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 20);
-            this.textBox8.TabIndex = 16;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(154, 192);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 15;
+            this.tbMailAnimadores.Location = new System.Drawing.Point(369, 155);
+            this.tbMailAnimadores.Name = "tbMailAnimadores";
+            this.tbMailAnimadores.Size = new System.Drawing.Size(195, 20);
+            this.tbMailAnimadores.TabIndex = 67;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 221);
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.Control;
+            this.label8.Location = new System.Drawing.Point(7, 184);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Especialidade";
+            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.TabIndex = 74;
+            this.label8.Text = "Especialidade:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 195);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Control;
+            this.label7.Location = new System.Drawing.Point(329, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Mail";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 73;
+            this.label7.Text = "Mail:";
             // 
-            // textBox6
+            // tbLocalidadeAnimadores
             // 
-            this.textBox6.Location = new System.Drawing.Point(154, 166);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 11;
+            this.tbLocalidadeAnimadores.Location = new System.Drawing.Point(103, 129);
+            this.tbLocalidadeAnimadores.Name = "tbLocalidadeAnimadores";
+            this.tbLocalidadeAnimadores.Size = new System.Drawing.Size(284, 20);
+            this.tbLocalidadeAnimadores.TabIndex = 60;
             // 
-            // textBox5
+            // tbMoradaAnimadores
             // 
-            this.textBox5.Location = new System.Drawing.Point(154, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 10;
+            this.tbMoradaAnimadores.Location = new System.Drawing.Point(103, 103);
+            this.tbMoradaAnimadores.Name = "tbMoradaAnimadores";
+            this.tbMoradaAnimadores.Size = new System.Drawing.Size(461, 20);
+            this.tbMoradaAnimadores.TabIndex = 58;
             // 
-            // textBox4
+            // tbNomeAnimadores
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 114);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 9;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(154, 88);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(154, 62);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(154, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 6;
+            this.tbNomeAnimadores.Location = new System.Drawing.Point(103, 77);
+            this.tbNomeAnimadores.Name = "tbNomeAnimadores";
+            this.tbNomeAnimadores.Size = new System.Drawing.Size(461, 20);
+            this.tbNomeAnimadores.TabIndex = 56;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 169);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
+            this.label6.Location = new System.Drawing.Point(180, 158);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Telemovel";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "Telemóvel:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 143);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(36, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Telefone";
+            this.label5.Size = new System.Drawing.Size(61, 13);
+            this.label5.TabIndex = 62;
+            this.label5.Text = "Telefone:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 117);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(393, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Código Postal";
+            this.label4.Size = new System.Drawing.Size(89, 13);
+            this.label4.TabIndex = 61;
+            this.label4.Text = "Código Postal:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 91);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(24, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Localidade";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "Localidade:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 65);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(44, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Morada";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Morada:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 39);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(54, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nome";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Nome:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.Control;
+            this.label9.Location = new System.Drawing.Point(219, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(168, 31);
+            this.label9.TabIndex = 76;
+            this.label9.Text = "Animadores";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(594, 24);
+            this.menuStrip1.TabIndex = 77;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoAnimadorToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // novoAnimadorToolStripMenuItem
+            // 
+            this.novoAnimadorToolStripMenuItem.Name = "novoAnimadorToolStripMenuItem";
+            this.novoAnimadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoAnimadorToolStripMenuItem.Text = "Novo";
+            this.novoAnimadorToolStripMenuItem.Click += new System.EventHandler(this.novoAnimadorToolStripMenuItem_Click);
             // 
             // FormularioAnimadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 390);
-            this.Controls.Add(this.groupBox1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(594, 384);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.listViewAnimadores);
+            this.Controls.Add(this.tbTelemovelAnimadores);
+            this.Controls.Add(this.tbTelefoneAnimadores);
+            this.Controls.Add(this.tbCodPostalAnimadores);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.buttonApagar);
+            this.Controls.Add(this.buttonAlterar);
+            this.Controls.Add(this.buttonAdicionar);
+            this.Controls.Add(this.tbEspecialidade);
+            this.Controls.Add(this.tbMailAnimadores);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbLocalidadeAnimadores);
+            this.Controls.Add(this.tbMoradaAnimadores);
+            this.Controls.Add(this.tbNomeAnimadores);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "FormularioAnimadores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestão de Animadores";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.FormularioAnimadores_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListView listViewAnimadores;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.MaskedTextBox tbTelemovelAnimadores;
+        private System.Windows.Forms.MaskedTextBox tbTelefoneAnimadores;
+        private System.Windows.Forms.MaskedTextBox tbCodPostalAnimadores;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button buttonApagar;
+        private System.Windows.Forms.Button buttonAlterar;
+        private System.Windows.Forms.Button buttonAdicionar;
+        private System.Windows.Forms.TextBox tbEspecialidade;
+        private System.Windows.Forms.TextBox tbMailAnimadores;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbLocalidadeAnimadores;
+        private System.Windows.Forms.TextBox tbMoradaAnimadores;
+        private System.Windows.Forms.TextBox tbNomeAnimadores;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem novoAnimadorToolStripMenuItem;
     }
 }

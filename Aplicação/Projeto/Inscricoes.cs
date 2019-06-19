@@ -14,11 +14,18 @@ namespace Projeto
     
     public partial class Inscricoes
     {
-        public string Confirmada { get; set; }
+        public bool Confirmada { get; set; }
         public int IdFilho { get; set; }
         public int NrEvento { get; set; }
     
         public virtual Filhos Filhos { get; set; }
         public virtual Eventos Eventos { get; set; }
+
+        public override string ToString()
+        {
+            return Filhos.Nome;
+        }
+
+
     }
 }

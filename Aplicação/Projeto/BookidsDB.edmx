@@ -98,7 +98,7 @@
       <PropertyRef Name="IdFilho" />
       <PropertyRef Name="NrEvento" />
     </Key>
-    <Property Name="Confirmada" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Confirmada" Type="bit" Nullable="false" />
     <Property Name="IdFilho" Type="int" Nullable="false" />
     <Property Name="NrEvento" Type="int" Nullable="false" />
   </EntityType>
@@ -129,12 +129,11 @@
     <Property Name="NrEvento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Local" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="DataHora" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="LimiteParticipacao" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="IdadeInferior" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="IdadeSuperior" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataHora" Type="datetime" Nullable="false" />
+    <Property Name="LimiteParticipacao" Type="int" Nullable="false" />
+    <Property Name="IdadeInferior" Type="int" Nullable="false" />
+    <Property Name="IdadeSuperior" Type="int" Nullable="false" />
     <Property Name="TipoEvento" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ColaboracoesId" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="ColaboracoesSet">
     <Key>
@@ -150,7 +149,7 @@
     </Key>
     <Property Name="NrCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IdCliente" Type="int" Nullable="false" />
-    <Property Name="Data" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="UtilizouCartao" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="DetalheComprasSet">
@@ -160,7 +159,7 @@
     </Key>
     <Property Name="NrCompra" Type="int" Nullable="false" />
     <Property Name="CodProduto" Type="int" Nullable="false" />
-    <Property Name="Quantidade" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantidade" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProdutosSet">
     <Key>
@@ -168,8 +167,8 @@
     </Key>
     <Property Name="CodProduto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Designacao" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Preco" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="StockExistente" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Preco" Type="float" Nullable="false" />
+    <Property Name="StockExistente" Type="int" Nullable="false" />
     <Property Name="CodTipoProduto" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="TipoProdutoSet">
@@ -183,8 +182,8 @@
     <Key>
       <PropertyRef Name="IdPessoa" />
     </Key>
-    <Property Name="ValorOferta" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NrCartao" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValorOferta" Type="float" Nullable="false" />
+    <Property Name="NrCartao" Type="int" Nullable="false" />
     <Property Name="IdPessoa" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PessoasSet_Filhos">
@@ -192,7 +191,7 @@
       <PropertyRef Name="IdPessoa" />
     </Key>
     <Property Name="Sexo" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="DataNascimento" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DataNascimento" Type="datetime" Nullable="false" />
     <Property Name="IdProgenitor" Type="int" Nullable="false" />
     <Property Name="IdEscola" Type="int" Nullable="false" />
     <Property Name="IdPessoa" Type="int" Nullable="false" />
@@ -468,14 +467,14 @@
           <Property Name="Mail" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Clientes" BaseType="BookidsDB.Pessoas">
-          <Property Name="ValorOferta" Type="String" Nullable="false" />
-          <Property Name="NrCartao" Type="String" Nullable="false" />
+          <Property Name="ValorOferta" Type="Double" Nullable="false" />
+          <Property Name="NrCartao" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Filhos" Relationship="BookidsDB.ClientesFilhos" FromRole="Clientes" ToRole="Filhos" />
           <NavigationProperty Name="Compras" Relationship="BookidsDB.ClientesCompras" FromRole="Clientes" ToRole="Compras" />
         </EntityType>
         <EntityType Name="Filhos" BaseType="BookidsDB.Pessoas">
           <Property Name="Sexo" Type="String" Nullable="false" />
-          <Property Name="DataNascimento" Type="String" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="Clientes" Relationship="BookidsDB.ClientesFilhos" FromRole="Filhos" ToRole="Clientes" />
           <Property Name="IdProgenitor" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Inscricoes" Relationship="BookidsDB.FilhosInscricoes" FromRole="Filhos" ToRole="Inscricoes" />
@@ -499,7 +498,7 @@
             <PropertyRef Name="IdFilho" />
             <PropertyRef Name="NrEvento" />
           </Key>
-          <Property Name="Confirmada" Type="String" Nullable="false" />
+          <Property Name="Confirmada" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Filhos" Relationship="BookidsDB.FilhosInscricoes" FromRole="Inscricoes" ToRole="Filhos" />
           <Property Name="IdFilho" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Eventos" Relationship="BookidsDB.EventosInscricoes" FromRole="Inscricoes" ToRole="Eventos" />
@@ -572,15 +571,14 @@
           <Property Name="NrEvento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descricao" Type="String" Nullable="false" />
           <Property Name="Local" Type="String" Nullable="false" />
-          <Property Name="DataHora" Type="String" Nullable="false" />
-          <Property Name="LimiteParticipacao" Type="String" Nullable="false" />
-          <Property Name="IdadeInferior" Type="String" Nullable="false" />
-          <Property Name="IdadeSuperior" Type="String" Nullable="false" />
+          <Property Name="DataHora" Type="DateTime" Nullable="false" />
+          <Property Name="LimiteParticipacao" Type="Int32" Nullable="false" />
+          <Property Name="IdadeInferior" Type="Int32" Nullable="false" />
+          <Property Name="IdadeSuperior" Type="Int32" Nullable="false" />
           <Property Name="TipoEvento" Type="String" Nullable="false" />
           <NavigationProperty Name="Participacoes" Relationship="BookidsDB.EventosParticipacoes" FromRole="Eventos" ToRole="Participacoes" />
           <NavigationProperty Name="Inscricoes" Relationship="BookidsDB.EventosInscricoes" FromRole="Eventos" ToRole="Inscricoes" />
           <NavigationProperty Name="Colaboracoes" Relationship="BookidsDB.EventosColaboracoes" FromRole="Eventos" ToRole="Colaboracoes" />
-          <Property Name="ColaboracoesId" Type="String" Nullable="false" />
         </EntityType>
         <Association Name="EventosParticipacoes">
           <End Type="BookidsDB.Eventos" Role="Eventos" Multiplicity="1" />
@@ -651,7 +649,7 @@
           <Property Name="NrCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <NavigationProperty Name="Clientes" Relationship="BookidsDB.ClientesCompras" FromRole="Compras" ToRole="Clientes" />
           <Property Name="IdCliente" Type="Int32" Nullable="false" />
-          <Property Name="Data" Type="String" Nullable="false" />
+          <Property Name="Data" Type="DateTime" Nullable="false" />
           <Property Name="UtilizouCartao" Type="String" Nullable="false" />
           <NavigationProperty Name="DetalheCompras" Relationship="BookidsDB.ComprasDetalheCompras" FromRole="Compras" ToRole="DetalheCompras" />
         </EntityType>
@@ -676,7 +674,7 @@
           <Property Name="NrCompra" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Produtos" Relationship="BookidsDB.ProdutosDetalheCompras" FromRole="DetalheCompras" ToRole="Produtos" />
           <Property Name="CodProduto" Type="Int32" Nullable="false" />
-          <Property Name="Quantidade" Type="String" Nullable="false" />
+          <Property Name="Quantidade" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="ComprasDetalheCompras">
           <End Type="BookidsDB.Compras" Role="Compras" Multiplicity="1" />
@@ -696,9 +694,9 @@
           </Key>
           <Property Name="CodProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Designacao" Type="String" Nullable="false" />
-          <Property Name="Preco" Type="String" Nullable="false" />
+          <Property Name="Preco" Type="Double" Nullable="false" />
           <NavigationProperty Name="DetalheCompras" Relationship="BookidsDB.ProdutosDetalheCompras" FromRole="Produtos" ToRole="DetalheCompras" />
-          <Property Name="StockExistente" Type="String" Nullable="false" />
+          <Property Name="StockExistente" Type="Int32" Nullable="false" />
           <NavigationProperty Name="TipoProduto" Relationship="BookidsDB.TipoProdutoProdutos" FromRole="Produtos" ToRole="TipoProduto" />
           <Property Name="CodTipoProduto" Type="Int32" Nullable="false" />
         </EntityType>
@@ -817,7 +815,6 @@
           <ScalarProperty Name="IdadeInferior" ColumnName="IdadeInferior" />
           <ScalarProperty Name="IdadeSuperior" ColumnName="IdadeSuperior" />
           <ScalarProperty Name="TipoEvento" ColumnName="TipoEvento" />
-          <ScalarProperty Name="ColaboracoesId" ColumnName="ColaboracoesId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

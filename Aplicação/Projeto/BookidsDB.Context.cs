@@ -35,9 +35,9 @@ namespace Projeto
         public virtual DbSet<DetalheCompras> DetalheComprasSet { get; set; }
         public virtual DbSet<Produtos> ProdutosSet { get; set; }
         public virtual DbSet<TipoProduto> TipoProdutoSet { get; set; }
+
         public virtual DbSet<Clientes> ClientesSet { get; set; }
         public virtual DbSet<Filhos> FilhosSet { get; set; }
         public virtual DbSet<Animadores> AnimadoresSet { get; set; }
     }
 }
-

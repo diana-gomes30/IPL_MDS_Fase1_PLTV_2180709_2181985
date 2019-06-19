@@ -19,5 +19,10 @@ namespace Projeto
     
         public virtual Animadores Animadores { get; set; }
         public virtual Eventos Eventos { get; set; }
+        public override string ToString()
+        {
+            return Animadores.Nome + "(" + Animadores.Especialidade + ")";
+        }
+
     }
 }

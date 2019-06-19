@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b9ca820d8a8d466ab711e49b4865a4f4" Name="Diagram1" ZoomLevel="78" >
+      <Diagram DiagramId="b9ca820d8a8d466ab711e49b4865a4f4" Name="Diagram1" ZoomLevel="54" >
         <EntityTypeShape EntityType="BookidsDB.Pessoas" Width="1.5" PointX="4.625" PointY="5.875" />
         <EntityTypeShape EntityType="BookidsDB.Clientes" Width="1.5" PointX="0.875" PointY="8.125" />
         <InheritanceConnector EntityType="BookidsDB.Clientes" />

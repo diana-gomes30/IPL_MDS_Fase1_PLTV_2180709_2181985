@@ -16,9 +16,14 @@ namespace Projeto
     {
         public int NrCompra { get; set; }
         public int CodProduto { get; set; }
-        public string Quantidade { get; set; }
+        public int Quantidade { get; set; }
     
         public virtual Compras Compras { get; set; }
         public virtual Produtos Produtos { get; set; }
+
+        public override string ToString()
+        {
+            return Produtos.Designacao + "(Quantidade: " + Quantidade + ")";
+        }
     }
 }
